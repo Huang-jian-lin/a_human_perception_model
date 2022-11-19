@@ -75,7 +75,7 @@ def main():
                         help='Path for test label file')
     parser.add_argument('--test_features_path', default='dataset/beautiful/beautiful.txt',
                         help='Path for test features file')
-    parser.add_argument('--save_model_path', default='dataset/beautiful/beautiful-model',
+    parser.add_argument('--save_model_path', default='model_weights/beautiful/beautiful-model',
                         help='Path to save model')
     args = parser.parse_args()
 
