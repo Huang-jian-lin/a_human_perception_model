@@ -52,16 +52,14 @@ def evaluate(model, test_file, feature_Path, save_model_path):
     MAE = mean_absolute_error(test_labels, rf_predict)
     MSE = mean_squared_error(test_labels, rf_predict)
     RMSE = MSE**0.5
-    r2 = r2_score(test_labels, rf_predict)
 
     print('Model Performance')
     print('MAE: {:0.2f}'.format(MAE))
     print('MSE: {:0.2f}'.format(MSE))
     print('RMSE: {:0.2f}'.format(RMSE))
-    print('r2: {:0.2f}'.format(r2))
 
     joblib.dump(model, save_model_path + '-' + format(MAE,'.2f')+ '-' +
-                format(MSE,'.2f') + '-' + format(RMSE,'.2f') + '-' + format(r2,'.2f') + '.m')
+                format(MSE,'.2f') + '-' + format(RMSE,'.2f') + '.m')
 
 
 def main():
